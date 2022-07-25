@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>LaTex</title>
+    <link href="/2022/07/25/LaTex/"/>
+    <url>/2022/07/25/LaTex/</url>
+    
+    <content type="html"><![CDATA[<p>$$<br>a^3+b^3&#x3D;c^3<br>$$</p><p>好耶！</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>插入排序</title>
     <link href="/2022/07/15/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/"/>
     <url>/2022/07/15/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/</url>
