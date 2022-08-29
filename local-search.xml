@@ -99,25 +99,6 @@
   
   
   <entry>
-    <title>blog-for-test</title>
-    <link href="/2022/07/10/%E6%96%87%E7%AB%A0blog-for-test/"/>
-    <url>/2022/07/10/%E6%96%87%E7%AB%A0blog-for-test/</url>
-    
-    <content type="html"><![CDATA[<p>Hello world!</p><span id="more"></span><p>测试！</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>-test</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Hello World</title>
     <link href="/2022/07/10/hello-world/"/>
     <url>/2022/07/10/hello-world/</url>
