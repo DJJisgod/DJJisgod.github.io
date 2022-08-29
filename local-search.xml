@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>8.29 Chapter1 1.1 homework</title>
+    <link href="/2022/08/29/8-29-Chapter1-1-1-homework/"/>
+    <url>/2022/08/29/8-29-Chapter1-1-1-homework/</url>
+    
+    <content type="html"><![CDATA[<p>​ 第一节课</p><span id="more"></span><p>第一题：</p><p>正常我们判断一个数的奇偶是看这个数能不能被二整除，运用这个思路写的程序就只要求数m满足m%2==0即可完成；</p><p>在学习了二进制性质一之后，我们有了一个新思路，即判断数m的二进制形式的最后一个比特是0还是1，来确定它的奇偶。但转念一想。哎……那这不是一个意思吗？</p><p>那题解就如下：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> m;<br>    cin&gt;&gt;m;<br>    <span class="hljs-keyword">if</span>(m%<span class="hljs-number">2</span>==<span class="hljs-number">0</span>)<br>    &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(m%<span class="hljs-number">2</span>==<span class="hljs-number">1</span>)<br>    &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><!--more--><p>第三题</p><p>根据今天上课学到的迭代乘法式，用C++语言表示出来</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment">#include &lt;bits/stdc++.h&gt;</span><br>using namespace std;<br>int main()<br>&#123;<br>    int m,i,n,t,l;<br>    int a[10];<br>    cin&gt;&gt;n&gt;&gt;m;<br>    int <span class="hljs-attribute">b</span>=0;<br>    int <span class="hljs-attribute">num</span>=0;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-attribute">i</span>=0;m&gt;0;i++)<br>    &#123;<br>        a[i]=m%2;<br>        <span class="hljs-attribute">m</span>=m/2;<br>        b++;<br>    &#125;<br><br>    <span class="hljs-keyword">for</span>(int <span class="hljs-attribute">j</span>=i;j&gt;=0;j--)<br>    &#123;<br>        <span class="hljs-keyword">if</span>(a[j]==1)<br>        &#123;<br>            <span class="hljs-attribute">t</span>=pow(2,j);<br>            <span class="hljs-attribute">l</span>=n*t;<br>            num+=l;<br>        &#125;<br>    &#125;<br>    cout&lt;&lt;num&lt;&lt;endl;<br>    return 0;<br>&#125;<br></code></pre></td></tr></table></figure><!--more--><p>第四题</p><p>证明命题1.1 证明过程： 首先证明前半部分：根据a | b，b |c，设b=qa，c=pb，其中q,p∈ Z。则c=p<em>(qa)=pq</em>a。由于p∈ Z，q∈Z，因此p,q∈ Z。所以 c | a得证。</p><p>证明后半部分： 根据c | a，c | b，设a=qc，b=pc，其中q,p∈Z。则(ma+nb)/c =ma/c+nb/c =mqc/c+npc/c =mq+np. 即ma+nb=(mq+np)c。由于q,p∈ Z，m, n ∈ Z，因此mq,np∈ Z。所以c | (ma + nb)得证。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>作业</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>LaTex</title>
     <link href="/2022/07/25/LaTex/"/>
     <url>/2022/07/25/LaTex/</url>
