@@ -232,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          451 字
+          428 字
         
       </span>
     
@@ -286,24 +286,18 @@
             
               <div class="markdown-body">
                 
-                <p>扩展欧几里得算法</p>
+                <p> 扩展欧几里得算法</p>
 <span id="more"></span>
 <p>今天在做作业时遇到了一个问题，关于通过拓展欧几里得算法来求得乘法逆元。</p>
 <p>在翻书的时候，发现书上的扩欧是这样写的：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">egcd</span>(<span class="hljs-params">a,b</span>):<br>    r0,r1,s0,s1=<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span><br>    <span class="hljs-keyword">while</span>(b):<br>    q,a,b=a/b,b,a%b<br>    r0,r1=r0,r0-q*r1<br>    s0,s1=s1,s0-q*s1<br><span class="hljs-keyword">return</span> a,r0,s0<br></code></pre></td></tr></table></figure>
 <p>很直观地实现了手写时的矩阵形式</p>
 <p>先写成</p>
-<p><span class="math inline">\(a*1+b*0=a\\a*0+b*1=b\)</span></p>
+<p>$a<em>1+b</em>0=a\a<em>0+b</em>1=b$</p>
 <p>的格式</p>
-<p>在对矩阵最右的<span class="math inline">\(a,b\)</span>进行<span
-class="math inline">\(a-a/b\)</span>的运算，用第一行减去第二行作为新的第二行，原来的第二行就变为新的第一行。</p>
-<p>即代码中的<span
-class="math inline">\(r0=r1,r1=r0-q*r1\)</span>便是第一行变为第二行，直观点来看就是原本是<span
-class="math inline">\(1,0\)</span>的<span
-class="math inline">\(r0=1,r1=0;r0=0,r1=1-q*0\)</span>得到<span
-class="math inline">\(0,1\)</span>，这不就是开始时的第二行吗；</p>
-<p>那么下一步的<span
-class="math inline">\(s0=s1.s1=s0-q*s1\)</span>也是同理。</p>
+<p>在对矩阵最右的$a,b$进行$a-a/b$的运算，用第一行减去第二行作为新的第二行，原来的第二行就变为新的第一行。</p>
+<p>即代码中的$r0=r1,r1=r0-q<em>r1$便是第一行变为第二行，直观点来看就是原本是$1,0$的$r0=1,r1=0;r0=0,r1=1-q</em>0$得到$0,1$，这不就是开始时的第二行吗；</p>
+<p>那么下一步的$s0=s1.s1=s0-q*s1$也是同理。</p>
 <p>这样子算得到的结果没有问题，那如果继续下一步的话运算就会出问题……（未完待续）</p>
 
                 
