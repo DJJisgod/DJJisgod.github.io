@@ -1,7 +1,6 @@
 <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>/* ============================================================
    本地音乐播放器配置（APlayer）
-   音频文件放在 source/music/ 目录，如需歌词，把 .lrc 文件
-   放到同一目录，并在对应歌曲里加一行 lrc: '/music/xx.lrc'
+   音频文件放在 source/music/ 目录
    ============================================================ */
 
 const ap = new APlayer({
@@ -12,17 +11,15 @@ const ap = new APlayer({
   theme: '#2D8CF0',       // 主题色
   loop: 'all',            // 循环：'all' 全部 / 'one' 单曲 / 'none' 不循环
   order: 'list',          // 顺序：'list' 顺序 / 'random' 随机
-  preload: 'none',        // 预加载：'none' 不预载（歌曲较多，避免卡顿）/ 'metadata' / 'auto'
+  preload: 'none',        // 预加载：'none' 不预载（歌曲较多，避免卡顿）
   volume: 0.7,            // 初始音量 0~1
   mutex: true,            // 多个播放器互斥（同时只播一个）
   listFolded: true,       // 播放列表默认折叠
   listMaxHeight: '300px', // 列表最大高度
-  lrcType: 3,             // 3 = 从 .lrc 文件加载歌词
 
   audio: [
     { name: 'オレンジ (Orange)',   artist: '7!!',             url: '/music/7-オレンジ-Orange.ogg' },
     { name: '光るなら (若能绽放光芒)', artist: 'Goose house',     url: '/music/Goose-house-光るなら-若能绽放光芒.ogg' },
-    { name: 'MILLION DOLLAR BABY', artist: 'Tommy Richman',  url: '/music/Tommy-Richman-MILLION-DOLLAR-BABY.flac' },
     { name: '莫斯科没有眼泪',        artist: 'Twins',           url: '/music/Twins-莫斯科没有眼泪.ogg' },
     { name: '死性不改',            artist: "Twins & Boy'z",    url: '/music/Twins-Boyz-死性不改.ogg' },
     { name: '回到过去',            artist: '周杰伦',            url: '/music/周杰伦-回到过去.ogg' },
